@@ -10,7 +10,8 @@ pdf(file=out, width=10, height=10)
 myLabel = as.vector(data$tsRNA_type)   
 myLabel = paste(myLabel, "(", round(data$num /sum(data$num) * 100, 2), "%)", sep = "") 
 count = data$num
-data$tsRNA_type = c('a', 'b', 'c' , 'd')
+##because the  first line 3'-tRF,5'-tRF,5'-half, i-tRF name rearrange the lines
+data$tsRNA_type = c('a', 'b', 'c' , 'd')  
 #p = ggplot(data, aes(x = "", y = reorder(num,-num), fill = tsRNA_type)) +
 p = ggplot(data, aes(x = "", y = num, fill = tsRNA_type)) +
   geom_bar(stat = "identity", width = 0.2 ) +  
