@@ -1,3 +1,4 @@
 # R
-A ring Plot ！
+ring.R：ring plot code；
+heatmap.R: heatmap code; 
 
